@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Information</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .image-preview {
+            max-width: 700px;
+            max-height: 800px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .placeholder {
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Profile-container" id="profileContainer">
+        <div class="Profile-header">Profile Information</div>
+        <div class="form">
+            <form id="profileForm">
+                <div>
+                    <img id="profileImage" class="image-preview placeholder" src="placeholder.png" alt="Profile Picture">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="profileImageInput">Upload Profile Image:</label>
+                        <input type="file" id="profileImageInput" name="profileImage" accept="image/*" onchange="previewImage(event)">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="qualification">Gender:</label>
+                        <input type="text" id="qualification" name="qualification" placeholder="Qualification" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="university">Country:</label>
+                        <input type="text" id="university" name="university" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="employment">City:</label>
+                        <input type="text" id="employment" name="employment" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job">Marital Status:</label>
+                        <input type="text" id="job" name="job" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="income">Childrens:</label>
+                        <input type="number" id="income" name="income" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="maritalStatus">Mother Alive:</label>
+                        <input type="text" id="maritalStatus" name="maritalStatus" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="height">Father Alive:</label>
+                        <input type="text" id="height" name="height" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="caste">Brothers:</label>
+                        <input type="text" id="caste" name="caste" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="disability">Sisters:</label>
+                        <input type="text" id="disability" name="disability" required>
+                    </div>
+                   
+                    
+                </div>
+                <button type="button" onclick="goToMoreInfo()">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('profileImage');
+                output.src = reader.result;
+                output.classList.remove('placeholder');
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+        function goToMoreInfo() {
+            window.location.href = "./religion.html";
+        }
+        
+    </script>
+</body>
+</html>

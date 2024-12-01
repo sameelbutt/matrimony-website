@@ -1,0 +1,307 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Comprehensive Registration Form
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      .form-section {
+        margin-bottom: 30px;
+      }
+      .form-section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      .form-group {
+        flex: 0 0 48%;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="file"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .image-preview {
+        width: 150px;
+        height: 150px;
+        border: 2px dashed #ddd;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #888;
+      }
+      .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .submit-btn:hover {
+        background-color: #2980b9;
+      }
+
+  body
+    .container
+      h1 Comprehensive Registration Form
+      form#registrationForm
+        .form-section
+          h2 Personal Information
+          .form-row
+            .form-group
+              label(for="FirstName") First Name:
+              input#FirstName(type="text", name="FirstName", required)
+            .form-group
+              label(for="LastName") Last Name:
+              input#LastName(type="text", name="LastName", required)
+          .form-row
+            .form-group
+              label(for="email") Email:
+              input#email(type="email", name="email", required)
+            .form-group
+              label(for="phoneno") Phone Number:
+              input#phoneno(type="text", name="phoneno", required)
+          .form-row
+            .form-group
+              label(for="password") Password:
+              input#password(type="password", name="password", required)
+            .form-group
+              label(for="confirmpassword") Confirm Password:
+              input#confirmpassword(type="password", name="confirmpassword", required)
+
+        .form-section
+          h2 Profile Information
+          .form-row
+            .form-group
+              label(for="gender") Gender:
+              select#gender(name="gender", required)
+                option(value="") Select gender
+                option(value="male") Male
+                option(value="female") Female
+            .form-group
+              label(for="age") Age:
+              input#age(type="text", name="age", required)
+          .form-row
+            .form-group
+              label(for="country") Country:
+              input#country(type="text", name="country", required)
+            .form-group
+              label(for="state") State:
+              input#state(type="text", name="state", required)
+          .form-row
+            .form-group
+              label(for="city") City:
+              input#city(type="text", name="city", required)
+            .form-group
+              label(for="martialstatus") Marital Status:
+              select#martialstatus(name="martialstatus", required)
+                option(value="") Select status
+                option(value="single") Single
+                option(value="divorced") Divorced
+          .form-row
+            .form-group
+              label(for="motheralive") Mother Alive:
+              select#motheralive(name="motheralive", required)
+                option(value="") Select option
+                option(value="yes") Yes
+                option(value="no") No
+            .form-group
+              label(for="fatheralive") Father Alive:
+              select#fatheralive(name="fatheralive", required)
+                option(value="") Select option
+                option(value="yes") Yes
+                option(value="no") No
+          .form-row
+            .form-group
+              label(for="brothers") Brothers:
+              input#brothers(type="number", name="brothers", min="0")
+            .form-group
+              label(for="sisters") Sisters:
+              input#sisters(type="number", name="sisters", min="0")
+
+        .form-section
+          h2 Religious Information
+          .form-row
+            .form-group
+              label(for="religion") Religion:
+              input#religion(type="text", name="religion", required)
+            .form-group
+              label(for="sec") Sect:
+              input#sec(type="text", name="sec", required)
+          .form-row
+            .form-group
+              label(for="doyoupreferhijab") Do you prefer hijab?
+              select#doyoupreferhijab(name="doyoupreferhijab", required)
+                option(value="") Select option
+                option(value="yes") Yes
+                option(value="no") No
+            .form-group
+              label(for="doyoukeephala") Do you keep halal?
+              select#doyoukeephala(name="doyoukeephala", required)
+                option(value="") Select option
+                option(value="yes") Yes
+                option(value="no") No
+
+        .form-section
+          h2 Appearance Information
+          .form-row
+            .form-group
+              label(for="height") Height:
+              input#height(type="text", name="height", required)
+            .form-group
+              label(for="weight") Weight:
+              input#weight(type="text", name="weight", required)
+          .form-row
+            .form-group
+              label(for="mybuilt") My Build:
+              select#mybuilt(name="mybuilt", required)
+                option(value="") Select build
+                option(value="smart") Smart
+                option(value="fat") Fat
+            .form-group
+              label(for="haircolor") Hair Color:
+              select#haircolor(name="haircolor", required)
+                option(value="") Select color
+                option(value="black") Black
+                option(value="brown") Brown
+                option(value="white") White
+
+        .form-section
+          h2 Career Information
+          .form-row
+            .form-group
+              label(for="qualification") Qualification:
+              input#qualification(type="text", name="qualification", required)
+            .form-group
+              label(for="university") University:
+              input#university(type="text", name="university", required)
+          .form-row
+            .form-group
+              label(for="cast") Cast:
+              input#cast(type="text", name="cast", required)
+            .form-group
+              label(for="job") Job:
+              input#job(type="text", name="job", required)
+          .form-row
+            .form-group
+              label(for="monthlyincome") Monthly Income:
+              input#monthlyincome(type="text", name="monthlyincome", required)
+
+        button.submit-btn(type="submit") Submit
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js")
+    script.
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('registrationForm');
+        
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+          
+          // Convert number fields to integers
+          ['brothers', 'sisters'].forEach(field => {
+            if (data[field]) {
+              data[field] = parseInt(data[field], 10);
+              if (isNaN(data[field])) {
+                data[field] = 0;
+              }
+            } else {
+              data[field] = 0;
+            }
+          });
+
+          // Ensure enum fields are not empty
+          const enumFields = ['gender', 'martialstatus', 'motheralive', 'fatheralive', 'doyoupreferhijab', 'doyoukeephala', 'mybuilt', 'haircolor'];
+          let isValid = true;
+          enumFields.forEach(field => {
+            if (!data[field]) {
+              isValid = false;
+              alert(`Please select a value for ${field}`);
+            }
+          });
+
+          if (isValid) {
+            sendFormData(data);
+          }
+        });
+
+        function sendFormData(data) {
+          axios.post('http://127.0.0.1:3000/api/v1/matrimony/signup', data)
+            .then(function (response) {
+              console.log(response.data);
+              alert('Registration successful!');
+              window.location.assign('/profiles');
+            })
+            .catch(function (error) {
+              console.error('Error:', error);
+              
+              let errorMessage = 'Registration failed. ';
+              
+              if (error.response) {
+                console.error('Server responded with error status:', error.response.status);
+                console.error('Server error data:', error.response.data);
+                
+                if (error.response.data && error.response.data.message) {
+                  errorMessage += error.response.data.message;
+                } else {
+                  errorMessage += 'Server error: ' + error.response.status;
+                }
+              } else if (error.request) {
+                console.error('No response received:', error.request);
+                errorMessage += 'No response from server. Please try again later.';
+              } else {
+                console.error('Error setting up request:', error.message);
+                errorMessage += 'An unexpected error occurred. Please try again.';
+              }
+              
+              alert(errorMessage);
+            });
+        }
+      });

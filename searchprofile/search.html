@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Profiles</title>
+    <link rel="stylesheet" href="./search.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Matrimony Search</h1>
+      </header>
+
+      <section class="search-section">
+        <form class="search-form">
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter city" />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age Range:</label>
+            <select id="age" name="age">
+              <option value="">Select age</option>
+              <option value="18-25">18-25</option>
+              <option value="26-35">26-35</option>
+              <option value="36-45">36-45</option>
+              <option value="46+">46+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+              <option value="">Select country</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="India">India</option>
+              <option value="Pakistan">Pakistan</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sect">Sect:</label>
+            <select id="sect" name="sect">
+              <option value="">Select sect</option>
+              <option value="Sunni">Sunni</option>
+              <option value="Shia">Shia</option>
+              <option value="Christian">Christian</option>
+              <option value="Hindu">Hindu</option>
+            </select>
+          </div>
+
+          <button type="submit" class="search-btn">Search Profiles</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

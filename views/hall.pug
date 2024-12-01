@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Event Booking
+    link(rel="stylesheet" href="Booking/styles.css")
+  body
+    include hallnav
+    .header
+      h1 Book your Events
+      p Booking memories...
+    .main
+      h2 Wedding Halls | Marquees | Events Management Companies in Pakistan
+      .card-container
+        each event in events
+          .card
+            img(src=`/Booking/${event.mainImage || 'default.jpg'}` alt="Event Hall")
+            .details
+              h3= event.name
+              p Pkr. #{event.price} head
+              a.book-btn(href=`/allevents/${event.slug}`) Book now

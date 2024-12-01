@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  .Profile-container#profileContainer
+    .Profile-header Profile Information
+    .form
+      form#profileForm(action="/religion" method="GET")
+        div
+          img#profileImage.image-preview.placeholder(src="placeholder.png" alt="Profile Picture")
+        .form-row
+          .form-group
+            label(for="profileImageInput") Upload Profile Image:
+            input#profileImageInput(type="file" name="profileImage" accept="image/*" onchange="previewImage(event)")
+        .form-row
+          .form-group
+            label(for="gender") Gender:
+            input#gender(type="text" name="gender" required)
+          .form-group
+            label(for="country") Country:
+            input#country(type="text" name="country" required)
+        .form-row
+          .form-group
+            label(for="city") City:
+            input#city(type="text" name="city" required)
+          .form-group
+            label(for="maritalStatus") Marital Status:
+            input#maritalStatus(type="text" name="maritalStatus" required)
+        .form-row
+          .form-group
+            label(for="children") Children:
+            input#children(type="number" name="children" required)
+          .form-group
+            label(for="motherAlive") Mother Alive:
+            input#motherAlive(type="text" name="motherAlive" required)
+        .form-row
+          .form-group
+            label(for="fatherAlive") Father Alive:
+            input#fatherAlive(type="text" name="fatherAlive" required)
+          .form-group
+            label(for="brothers") Brothers:
+            input#brothers(type="text" name="brothers" required)
+        .form-row
+          .form-group
+            label(for="sisters") Sisters:
+            input#sisters(type="text" name="sisters" required)
+        button(type="submit") Next
+
+block scripts
+  script.
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function(){
+        const output = document.getElementById('profileImage');
+        output.src = reader.result;
+        output.classList.remove('placeholder');
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }

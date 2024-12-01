@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Search Profiles
+    link(rel="stylesheet", href="/public/styles.css")
+  body
+    h1 Search for Profiles
+    form(action="/api/v1/matrimony/search" method="get")  // updated route prefix
+      label(for="age") Age:
+      input(type="text" id="age" name="age")
+      
+      label(for="city") City:
+      input(type="text" id="city" name="city")
+      
+      label(for="sec") Sect:
+      input(type="text" id="sec" name="sec")
+      
+      button(type="submit") Search
+
+    // Display search results if any
+    if users && users.length > 0
+      ul
+        each user in users
+          li
+            | Name: #{user.FirstName} #{user.LastName}, Age: #{user.age}, City: #{user.city}, Sect: #{user.sec}
+    else
+      p No profiles found.

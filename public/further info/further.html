@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="fur.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YOUR ACCOUNT SETTINGS</h1>
+        <form action="#">
+            <div class="settings">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" readonly value="TheOnlyNti">
+            </div>
+            <div class="settisngs">
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" readonly value="theonlynti@gmail.com">
+            </div>
+            <div class="settings">
+                <label for="photo">Choose new photo</label>
+                <input type="file" name="photo" id="photo">
+            </div>
+            <button type="submit">SAVE SETTINGS</button>
+        </form>
+        <h2>PASSWORD CHANGE</h2>
+        <form action="#">
+            <div class="settings">
+                <label for="current-password">Current password</label>
+                <input type="password" name="current-password" id="current-password">
+                <label for="new-password">New password</label>
+                <input type="password" name="new-password" id="current-password">
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" name="confirm-password" id="current-password">
+            </div>
+            <button type="submit">CHANGE PASSWORD</button>
+        </form>
+    </div>
+</body>
+</html>

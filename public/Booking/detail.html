@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sameel One - Elegant Weddings & Memorable Celebrations</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <h1>Sameel One</h1>
+            <p class="tagline">Elegant Weddings & Memorable Celebrations</p>
+            <p class="contact">Contact: (123) 456-7890 | info@sameelone.com</p>
+        </header>
+
+        <nav>
+            <button class="cta">Book Now</button>
+        </nav>
+
+        <div class="main-image">
+            <img src="image2.jpg" alt="Main Event Image" id="mainImage">
+            <div class="thumbnail-container">
+                <img src="image1.jpg" onclick="changeImage('image1.jpg')">
+                <img src="image2.jpg" onclick="changeImage('image2.jpg')">
+                <img src="image3.jpg" onclick="changeImage('image3.jpg')">
+                <img src="image4.jpg" onclick="changeImage('image4.jpg')">
+            </div>
+        </div>
+
+        <div class="overview">
+            <h2>Welcome to Sameel One</h2>
+            <p>Experience the wedding of your dreams in our luxurious venue. Sameel One offers a perfect blend of elegance and modern amenities to make your special day truly unforgettable.</p>
+        </div>
+
+        <div class="details">
+            <section id="capacity-amenities">
+                <h3>Capacity & Amenities</h3>
+                <ul>
+                    <li><i class="fas fa-users"></i> Seating for up to 500 guests</li>
+                    <li><i class="fas fa-music"></i> State-of-the-art sound system</li>
+                    <li><i class="fas fa-female"></i> Luxurious bridal suite</li>
+                    <li><i class="fas fa-parking"></i> Ample parking space</li>
+                    <li><i class="fas fa-snowflake"></i> Central air conditioning</li>
+                </ul>
+            </section>
+            <div class="overview guest-input-container">
+                <h3>Enter Your Guest here</h3>
+                <label for="guest-number">Number of Guests:</label>
+                <input type="number" id="guest-number" name="guest-number" placeholder="Enter number of guests">
+               
+            </div>
+
+            <section id="availability">
+                <h3>Check Available Dates</h3>
+                <p>Ready to book your dream wedding? Check our calendar for available dates and secure your special day with us.</p>
+                <input type="text" id="date-picker" placeholder="Select Date">
+                <button class="cta">Check Availabity of Hall</button>
+            </section>
+        </div>
+
+        <footer>
+            <div id="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </footer>
+        <nav>
+            <button class="cta">Book Now</button>
+        </nav>
+    </div>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+
+        // Initialize Flatpickr
+        flatpickr("#date-picker", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            mode: "single",
+            defaultDate: new Date()
+        });
+    </script>
+</body>
+</html>

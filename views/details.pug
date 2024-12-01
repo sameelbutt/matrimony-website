@@ -1,0 +1,94 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Sameel One - Elegant Weddings & Memorable Celebrations
+    link(rel="stylesheet", href="/Booking/event.css")
+    script(src="https://kit.fontawesome.com/a076d05399.js")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/flatpickr")
+    script(src='https://js.stripe.com/v3/')
+    script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+  body
+    .container
+      header
+        h1= event.name
+        p.tagline= event.address
+        p.contact Contact: (123) 456-7890 | info@sameelone.com
+        nav
+          if users
+            button.cta#book-event(data-event-id=`${event.id}`) Book Now
+          else
+            a.button.cta(href="/hall_login") Login
+
+      .main-image
+        img#mainImage(src=`/Booking/${event.mainImage || 'default.jpg'}`, alt="Main Event Image")
+        .thumbnail-container
+          each image, index in event.images
+            img(src=`/Booking/${image}`, alt=`Thumbnail ${index + 1}`, onclick=`changeImage('${image}')`)
+
+      .overview
+        h2 Welcome to #{event.name}
+        p= event.description
+
+      .details
+        section#capacity-amenities
+          h3 Capacity & Amenities
+          ul
+            li
+              i.fas.fa-users
+              | Seating for up to #{event.capacity} guests
+            li
+              i.fas.fa-music
+              | State-of-the-art sound system
+            li
+              i.fas.fa-female
+              | Luxurious bridal suite
+            li
+              i.fas.fa-parking
+              | Ample parking space
+            li
+              i.fas.fa-snowflake
+              | Central air conditioning
+
+        .overview.guest-input-container
+          h3 Enter Your Guest here
+          label(for="guest-number") Number of Guests:
+          input#guest-number(type="number", name="guest-number", placeholder="Enter number of guests")
+
+        section#availability
+          h3 Check Available Dates
+          p Ready to book your dream wedding? Check our calendar for available dates and secure your special day with us.
+          form#availability-form
+            input#date-picker(type="text", placeholder="Select Date")
+            button.cta#checkAvailabilityButton(data-event-id=`${event.id}`) Check Availability of Hall
+
+
+    footer
+      #social-media
+        a(href="#")
+          i.fab.fa-facebook
+        a(href="#")
+          i.fab.fa-instagram
+        a(href="#")
+          i.fab.fa-twitter
+        a(href="#")
+          i.fab.fa-pinterest
+
+    script.
+      function changeImage(imageSrc) {
+        document.getElementById('mainImage').src = `/Booking/${imageSrc}`;
+      }
+
+      // Initialize Flatpickr
+      flatpickr("#date-picker", {
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        mode: "single",
+        defaultDate: new Date()
+      });
+
+    //- script(src="/js/availability.js")
+    script(src="/js/stripe.js")
+    //- script(src="/js/date.js")

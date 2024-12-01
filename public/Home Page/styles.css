@@ -1,0 +1,417 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar style */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    /* Ensures navbar stays on top of other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8d56a4;
+    
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+
+.user-profile {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.user-name {
+    font-size: 15px;
+    margin-right: 43px;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 73px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: white;
+}
+
+
+.navbar-right .logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+/* home style */
+
+#Home {
+    padding: 40px;
+   
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.content-wrapper {
+    display: flex;
+    max-width: 1200px; /* Restrict the maximum width */
+    width: 100%;
+    padding: 20px;
+    
+}
+
+.left-content {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content h1 {
+    color: #6b3e8f;
+    font-size: 4.1em;
+    margin-bottom: 20px;
+    margin-top: -89px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: -3px;
+    
+}
+
+.register-button {
+    color: white;
+    background-color: #6b3e8f;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: start; /* Align button to start */
+    margin-top: 9px;
+}
+
+.register-button:hover {
+    background-color: #5a3177;
+}
+
+.bride-image {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match border radius of container */
+}
+
+
+/* services style */
+#Services {
+    background-color: #f6f1f8;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+#Services h1 {
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 20px;
+    color: #855aa0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service {
+    margin: 10px 20px;
+    text-align: center;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.service i {
+    font-size: 5em;
+    margin-bottom: 20px;
+    display: block;
+    color: #01adff;
+}
+
+.service h2 {
+    font-size: 1.5em;
+    margin: 20px;
+    color: #855aa0;
+}
+
+/* join style */
+
+#join {
+    background-color: #8d56a4;
+    padding: 20px;
+    margin-top: 30px;
+
+}
+
+.join-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.join-container .content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.join-container .left-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.join-container .right-content {
+    flex: 1;
+}
+
+.join-container h3 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+    text-align: center;
+    padding-left: 110px;
+    padding-top: 40px;
+}
+
+.join-container .join-image {
+    width: 65%;
+    height: 400px;
+    padding-left: 70px;
+    background-color: #8d56a4;
+}
+
+/* about style */
+
+#about {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+#about h1 {
+    font-size: 2.5em;
+    color: #8d56a4;
+}
+
+#about .Perfect-image,
+#about .Trust-image,
+#about .Suportive-image {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    height: auto;
+    padding-top: 0;
+}
+
+#about h2 {
+    font-size: 2em;
+    color: #ff5459;
+}
+/* Stories container */
+.Stories-container {
+    width: auto;
+    background: #F3ECF5;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Added to allow cards to wrap */
+    justify-content: center;
+  
+  }
+  
+  .Stories {
+    font-size: 3rem;
+    text-align: center;
+    color: #7D3F98;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .card {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 66px;
+    background-color: #fff;
+    max-width: 300px;
+    
+  }
+  .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 260px;
+    display: block;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: #7D3F98;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #7D3F98;
+    margin: 10px 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  /* footer container */
+  .footer-container {
+    width: auto;
+    background: #7D3F98;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  
+  .foot {
+    flex: 1;
+    margin: 0 66px 66px 66px;
+    max-width: 300px;
+    color: white;
+  }
+  
+  .ft-color {
+    font-size: 2rem;
+  }
+  
+  .line {
+    border: none;
+    /* Remove default border */
+    border-top: 1px solid #FFFFFF;
+    /* Add custom border */
+    width: 30%;
+    float: left;
+  }
+  
+  .ft-list {
+    margin-top: 10px; /* Adjust as needed */
+    padding-left: 0; /* Reset default padding */
+    list-style-type: none; /* Remove bullet points */
+  }
+  
+  .foot h3.ft-color {
+    margin-bottom: 0; /* Remove bottom margin of the h3 */
+  }
+  
+  .foot hr.line {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .foot ul.ft-list {
+    margin-top: 10px; /* Add margin above the ul */
+    margin-bottom: 5px;
+    padding-left: 0; /* Reset default padding */
+    list-style-type: none; /* Remove bullet points */
+  }
+  
+  /* Base styles for all buttons */
+.nav__el {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for inner content */
+    /* Margin for spacing between buttons */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Indicate clickable element */
+    transition: background-color 0.2s ease-in-out; /* Smooth background color transition on hover */
+    margin-right: 26px;
+  }
+  
+  /* Styles for the CTA button (Signup) */
+  .nav__el--cta {
+    background-color: #4CAF50; /* Green background for CTA */
+    color: #fff; /* White text for CTA */
+    border-color: #4CAF50; /* Grsssseen border for CTA */
+
+  }
+  
+  /* Hover effect for all buttons */
+  .nav__el:hover {
+    background-color: #ada3a3; /* Slightly lighter background on hover */
+  }
+  
+  /* Navbar specific styling (optional) */
+  
+  
+  

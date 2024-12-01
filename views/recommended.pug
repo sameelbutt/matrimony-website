@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/Home Page/styles.css")
+    link(rel="stylesheet" href="/Profile-Card/style.css")
+    title Professional Profiles
+
+  body
+    header
+    include _header 
+
+    .profiles-container
+      each profile in recommendations
+        .profile-card
+          .profile-image
+            img(src=`Profile-Card/image1.jpg` alt=`${profile.FirstName} ${profile.LastName}`)
+          .profile-info
+            h2.profile-name #{profile.FirstName} #{profile.LastName}
+            .profile-details
+              .detail
+                span.label Age:
+                span.value #{profile.age} years old
+              .detail
+                span.label Cast:
+                span.value #{profile.cast}
+              .detail
+                span.label Qualification:
+                span.value #{profile.qualification}
+              .detail
+                span.label Religion:
+                span.value #{profile.religion}
+            a.view-profile-button(href=`/profiles/${profile.slug}`) View Profile

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .sam{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello {{recipientName}},</h1>
+    <p>A new user has just created a profile on our platform. Here are the details:</p>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>{{newUserName}}</td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td>{{newUserAge}}</td>
+        </tr>
+        <tr>
+            <th>Gender:</th>
+            <td>{{newUserGender}}</td>
+        </tr>
+        <tr>
+            <th>Country:</th>
+            <td>{{newUserCountry}}</td>
+        </tr>
+        <tr>
+            <th>City:</th>
+            <td>{{newUserCity}}</td>
+        </tr>
+    </table>
+    <p>Check out their profile on our platform now!</p>
+    
+    <p>Best regards,<br>Sameel Butt CEO of Matrimony Website</p>
+</body>
+</html>

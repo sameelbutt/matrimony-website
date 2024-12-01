@@ -1,0 +1,93 @@
+    /* Styling for the profile card */
+
+    body{
+        background-color: #ceb6d8;
+    }
+    .card-profile{
+        margin-top: 60px;
+       
+    }
+    h1{
+        text-align: center;
+        color:black;
+        margin-top: 24px;
+        margin-bottom: -20px;
+    }
+
+    .profile-card {
+        background-color: purple;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        width: 813px;
+        margin: 50px auto;
+        /* Add this line */
+    }
+
+    .img-div {
+        margin: 10px 20px;
+        /* Add spacing between image and profile details */
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+
+
+    .profile-name {
+        color: #fff;
+        margin-top: 11px;
+        font-size: 30px;
+    }
+
+    .profile-details {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        gap: 20px;
+    }
+
+    .profile-details .row {
+        display: flex;
+        flex-direction: row;
+        background: #ccc;
+        padding: 5px 0;
+    }
+
+    .profile-details .row .col {
+        display: flex;
+        width: 50%;
+        
+    }
+
+    .profile-details .row .col div {
+        width: 50%;
+        padding-left: 10px;
+    }
+
+    .pro-btn {
+        padding-top: 10px;
+    }
+
+    .pro-btn .view-profile-button {
+        margin-right: 0;
+        float: right;
+        text-decoration: none;
+        cursor: pointer;
+        height: 30px;
+        width: 105px;
+        border: none;
+        background-color: #ccc;
+        color: black;
+        display: flex;
+        /* Add this line */
+        align-items: center;
+        justify-content: center;
+    }
+    .no-profiles-message{
+        text-align: center;
+        
+    }

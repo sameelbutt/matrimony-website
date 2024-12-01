@@ -1,0 +1,18 @@
+nav.navbar
+  .navbar-container
+    .logo
+      img(src='logo.png' alt='Logo')
+    ul.nav-links
+      li
+        a(href='#') Home
+      li
+        a(href='#') Halls
+      li
+        //- Add this line for debugging
+        - console.log('Users:', users)
+        if users
+          a(href='#') Logout
+        else
+          a(href='/hall_login') Login
+          li
+           a(href='/hall_signup') Signup

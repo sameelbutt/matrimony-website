@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+  h1 Search Results
+  if users && users.length > 0
+    ul
+      each user in users
+        li
+          | Name: #{user.FirstName} #{user.LastName}, Age: #{user.age}, City: #{user.city}, Sect: #{user.sec}
+  else
+    p No profiles found.

@@ -1,0 +1,22 @@
+nav.navbar
+     .navbar-right
+        a.logo(href="/")
+            img.logo-img(src="./Home Page/xxz.jpg", alt="Logo")
+    
+     .navbar-center
+        a.nav-link(href="/") Home
+        a.nav-link(href="#Services") Services
+        a.nav-link(href="/profiles") Profiles
+        a.nav-link(href="/recommendedprofiles") Recommended Profiles
+        a.nav-link(href="#join") Contact Us
+        a.nav-link(href="#about") About Us
+    
+     .navbar-left
+       if user
+          a.user-profile(href="file:///C:/Users/AMC/Downloads/Proj/further%20info/further.html")
+                 img.user-icon(src=`/Persional-Information/${user.photo}`, alt="User Profile")
+                 span.user-name #{user.FirstName}
+          a.nav__el(href='/logout', id='logoutLink') Logout
+       else
+         a.nav__el(href='/loginform') Login
+         a.nav__el.nav__el--cta(href='/signupform') Signup

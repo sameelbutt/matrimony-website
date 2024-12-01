@@ -1,0 +1,138 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/Persional-Information/styles.css")
+    title Professional Profile
+
+  body
+    .profile-page
+      header
+        h1 Profile Overview
+
+      .profile-container
+        .profile-header
+          img(src=`/Persional-Information/o.jpg` alt="Profile Picture" class="profile-image")
+          h2.profile-name #{profile.FirstName} #{profile.LastName}
+          p.profile-tagline #{profile.job} | #{profile.age} years old
+
+        .profile-details
+          .section
+            h3.section-title Personal Information
+            .details-grid
+              .detail-item
+                .label Gender:
+                .value #{profile.gender}
+              .detail-item
+                .label Age:
+                .value #{profile.age} years old
+              .detail-item
+                .label Qualification:
+                .value #{profile.qualification}
+              .detail-item
+                .label Country:
+                .value #{profile.country}
+              .detail-item
+                .label City:
+                .value #{profile.city}
+              .detail-item
+                .label Marital Status:
+                .value #{profile.martialstatus}
+              .detail-item
+                .label Children:
+                .value #{profile.childrens}
+              .detail-item
+                .label Mother Alive:
+                .value #{profile.motheralive}
+              .detail-item
+                .label Father Alive:
+                .value #{profile.fatheralive}
+              .detail-item
+                .label Brothers:
+                .value #{profile.brothers}
+              .detail-item
+                .label Sisters:
+                .value #{profile.sisters}
+
+          .section
+            h3.section-title Religion
+            .details-grid
+              .detail-item
+                .label Religion:
+                .value #{profile.religion}
+              .detail-item
+                .label Sect:
+                .value #{profile.sec}
+              .detail-item
+                .label Do You Prefer Hijab:
+                .value #{profile.doyoupreferhijab}
+              .detail-item
+                .label Do You Keep Halal:
+                .value #{profile.doyoukeephala}
+
+          .section
+            h3.section-title Career Information
+            .details-grid
+              .detail-item
+                .label Qualification:
+                .value #{profile.qualification}
+              .detail-item
+                .label University:
+                .value #{profile.university}
+              .detail-item
+                .label Job:
+                .value #{profile.job}
+              .detail-item
+                .label Monthly Income:
+                .value #{profile.monthlyincome}
+
+          .section
+            h3.section-title Appearance
+            .details-grid
+              .detail-item
+                .label Height:
+                .value #{profile.height}
+              .detail-item
+                .label Weight (Kg):
+                .value #{profile.weight}
+              .detail-item
+                .label My Build:
+                .value #{profile.mybuilt}
+              .detail-item
+                .label Hair Color:
+                .value #{profile.haircolor}
+
+          .section
+            h3.section-title Life Partner Expectations
+            .details-grid
+              .detail-item
+                .label Age:
+                .value #{profile.age}
+              .detail-item
+                .label Country:
+                .value #{profile.country}
+              .detail-item
+                .label City:
+                .value #{profile.city}
+              .detail-item
+                .label Religiousness:
+                .value #{profile.religion}
+              .detail-item
+                .label Qualification:
+                .value #{profile.qualification}
+              .detail-item
+                .label Height:
+                .value #{profile.height}
+              .detail-item
+                .label Disabilities:
+                .value #{profile.disabilities}
+              .detail-item
+                .label Marital Status:
+                .value #{profile.martialstatus}
+              .detail-item
+                .label Living:
+                .value #{profile.living}
+              .detail-item
+                .label Job Holder:
+                .value #{profile.jobholder}
